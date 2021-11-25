@@ -1,5 +1,51 @@
 PODS:
   - boost (1.76.0)
+  - Braintree (4.38.0):
+    - Braintree/Card (= 4.38.0)
+    - Braintree/Core (= 4.38.0)
+    - Braintree/PayPal (= 4.38.0)
+    - Braintree/UI (= 4.38.0)
+  - Braintree/Apple-Pay (4.38.0):
+    - Braintree/Core
+  - Braintree/Card (4.38.0):
+    - Braintree/Core
+  - Braintree/Core (4.38.0)
+  - Braintree/DataCollector (4.38.0):
+    - Braintree/Core
+  - Braintree/PaymentFlow (4.38.0):
+    - Braintree/Card
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPal (4.38.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.38.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.38.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.38.0)
+  - Braintree/UI (4.38.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/UnionPay (4.38.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/Venmo (4.38.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - BraintreeDropIn (8.2.0):
+    - BraintreeDropIn/DropIn (= 8.2.0)
+  - BraintreeDropIn/DropIn (8.2.0):
+    - Braintree/Card (~> 4.32)
+    - Braintree/Core (~> 4.32)
+    - Braintree/PaymentFlow (~> 4.32)
+    - Braintree/PayPal (~> 4.32)
+    - Braintree/UnionPay (~> 4.32)
+    - BraintreeDropIn/UIKit
+  - BraintreeDropIn/UIKit (8.2.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.66.3)
@@ -337,6 +383,13 @@ PODS:
     - React-jsi (= 0.66.3)
     - React-logger (= 0.66.3)
     - React-perflogger (= 0.66.3)
+  - RNBraintreeDropIn (1.0.0):
+    - Braintree
+    - Braintree/Apple-Pay
+    - Braintree/DataCollector
+    - Braintree/Venmo
+    - BraintreeDropIn
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -394,10 +447,13 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNBraintreeDropIn (from `../node_modules/react-native-braintree-dropin-ui/ios`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
+    - Braintree
+    - BraintreeDropIn
     - CocoaAsyncSocket
     - Flipper
     - Flipper-Boost-iOSX
@@ -472,11 +528,15 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNBraintreeDropIn:
+    :path: "../node_modules/react-native-braintree-dropin-ui/ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
+  Braintree: 78a33deb6f6ec617c2c4891fbe352854358b3a8d
+  BraintreeDropIn: b57b653d130981aad7ad9bc97a69d3d7ef86f7a1
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   FBLazyVector: de148e8310b8b878db304ceea2fec13f2c02e3a0
@@ -518,6 +578,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 50cfe7049167cfc7e83ac5542c6fff0c76791a9b
   React-runtimeexecutor: bbbdb3d8fcf327c6e2249ee71b6ef1764b7dc266
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
+  RNBraintreeDropIn: d067eb9aed64cda5943257374a9d9f76f8bc6d38
   Yoga: 32a18c0e845e185f4a2a66ec76e1fd1f958f22fa
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
