@@ -145,7 +145,6 @@
 				4C087FBCB5D251CBFAEC7BD9 /* Pods-BraintreeDropInErrorRepro-BraintreeDropInErrorReproTests.debug.xcconfig */,
 				72754F54DA64DF35091C3D41 /* Pods-BraintreeDropInErrorRepro-BraintreeDropInErrorReproTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -482,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0995D19F619EBAE562275D7F /* Pods-BraintreeDropInErrorRepro.debug.xcconfig */;
 			buildSettings = {
+				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -508,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80C5AD0F8737478A5DCAEB07 /* Pods-BraintreeDropInErrorRepro.release.xcconfig */;
 			buildSettings = {
+				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
