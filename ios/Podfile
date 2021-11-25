@@ -12,6 +12,9 @@ target 'BraintreeDropInErrorRepro' do
     :hermes_enabled => false
   )
 
+  pod 'Braintree', '4.36.0'
+  pod 'BraintreeDropIn', '8.1.1', :inhibit_warnings => true
+
   target 'BraintreeDropInErrorReproTests' do
     inherit! :complete
     # Pods for testing
